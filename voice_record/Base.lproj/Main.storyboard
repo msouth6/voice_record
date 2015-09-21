@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUD-Lx-yFA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="voice_record" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,6 +34,7 @@
                                 <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qr-kw-U4U"/>
+                                    <segue destination="dOm-mP-6XI" kind="show" id="Bsd-4z-cFb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,12 +49,52 @@
                             <constraint firstItem="IwQ-Of-WGi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nuA-Ld-5Xf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Record" id="Em2-Ib-dlW"/>
                     <connections>
+                        <outlet property="recordButton" destination="IwQ-Of-WGi" id="kkd-8N-ZE1"/>
                         <outlet property="recordLabel" destination="l4M-Ur-WOj" id="V5m-7n-8eW"/>
+                        <outlet property="stopButton" destination="yGb-gG-nvA" id="afG-sc-ZkC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="44" y="63"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0cK-d4-WEb">
+            <objects>
+                <viewController id="dOm-mP-6XI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kY4-yO-Whb"/>
+                        <viewControllerLayoutGuide type="bottom" id="zbQ-Cx-IBT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NbD-js-Avn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhK-df-jql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="63"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uYq-yG-XGD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fUD-Lx-yFA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mPx-dd-G7g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="t7C-jh-fog"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UDI-70-wFI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-618" y="63"/>
         </scene>
     </scenes>
     <resources>
