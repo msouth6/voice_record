@@ -8,7 +8,7 @@
         <!--Record-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="voice_record" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RecordSoundsViewController" customModule="voice_record" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -98,10 +98,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wRu-Yy-DkB" firstAttribute="centerX" secondItem="NbD-js-Avn" secondAttribute="centerX" id="07F-8q-Yli"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tqd-5M-pGQ" secondAttribute="trailing" constant="48" id="69D-Xu-dbu"/>
                             <constraint firstItem="22x-9n-30M" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="CFp-L4-Ag5"/>
-                            <constraint firstItem="Tqd-5M-pGQ" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="O10-gR-VFk"/>
+                            <constraint firstItem="Tqd-5M-pGQ" firstAttribute="top" secondItem="22x-9n-30M" secondAttribute="top" id="W9w-Y2-fhJ"/>
                             <constraint firstItem="zbQ-Cx-IBT" firstAttribute="top" secondItem="wRu-Yy-DkB" secondAttribute="bottom" constant="144" id="bYS-1U-EDk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tqd-5M-pGQ" secondAttribute="trailing" constant="48" id="nfY-IL-xiN"/>
                             <constraint firstItem="22x-9n-30M" firstAttribute="leading" secondItem="NbD-js-Avn" secondAttribute="leadingMargin" constant="48" id="xAJ-RO-60n"/>
                         </constraints>
                     </view>
