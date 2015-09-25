@@ -19,6 +19,7 @@
 		AA9AB58C1BB01DE700F324E4 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = AA9AB58A1BB01DE700F324E4 /* Images */; settings = {ASSET_TAGS = (); }; };
 		AA9AB58D1BB01DE700F324E4 /* audio_data in Resources */ = {isa = PBXBuildFile; fileRef = AA9AB58B1BB01DE700F324E4 /* audio_data */; settings = {ASSET_TAGS = (); }; };
 		AA9AB58F1BB0225800F324E4 /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AA9AB58E1BB0225800F324E4 /* movie_quote.mp3 */; settings = {ASSET_TAGS = (); }; };
+		AAC890141BB58B5E000A9C09 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC890131BB58B5E000A9C09 /* RecordedAudio.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AA9AB58A1BB01DE700F324E4 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		AA9AB58B1BB01DE700F324E4 /* audio_data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = audio_data; sourceTree = "<group>"; };
 		AA9AB58E1BB0225800F324E4 /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
+		AAC890131BB58B5E000A9C09 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				AA9AB58E1BB0225800F324E4 /* movie_quote.mp3 */,
 				AA9AB5581BB00A2200F324E4 /* AppDelegate.swift */,
 				AA9AB55A1BB00A2200F324E4 /* RecordSoundsViewController.swift */,
+				AAC890131BB58B5E000A9C09 /* RecordedAudio.swift */,
 				AA9AB55C1BB00A2200F324E4 /* Main.storyboard */,
 				AA9AB5861BB0192F00F324E4 /* PlaySoundsViewController.swift */,
 				AA9AB55F1BB00A2200F324E4 /* Assets.xcassets */,
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC890141BB58B5E000A9C09 /* RecordedAudio.swift in Sources */,
 				AA9AB55B1BB00A2200F324E4 /* RecordSoundsViewController.swift in Sources */,
 				AA9AB5871BB0192F00F324E4 /* PlaySoundsViewController.swift in Sources */,
 				AA9AB5591BB00A2200F324E4 /* AppDelegate.swift in Sources */,
