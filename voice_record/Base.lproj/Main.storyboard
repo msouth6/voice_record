@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUD-Lx-yFA">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -16,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwQ-Of-WGi">
-                                <rect key="frame" x="223" y="250" width="154" height="100"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwQ-Of-WGi">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
                                 <state key="normal" image="microphone"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8h-AK-2Ay"/>
@@ -29,8 +30,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-gG-nvA">
-                                <rect key="frame" x="248" y="429" width="104" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGb-gG-nvA">
+                                <rect key="frame" x="275" y="429" width="50" height="50"/>
                                 <state key="normal" image="stop"/>
                                 <connections>
                                     <action selector="stopRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9qr-kw-U4U"/>
@@ -60,10 +61,10 @@
             </objects>
             <point key="canvasLocation" x="44" y="63"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="0cK-d4-WEb">
             <objects>
-                <viewController id="dOm-mP-6XI" sceneMemberID="viewController">
+                <viewController id="dOm-mP-6XI" customClass="PlaySoundsViewController" customModule="voice_record" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kY4-yO-Whb"/>
                         <viewControllerLayoutGuide type="bottom" id="zbQ-Cx-IBT"/>
@@ -71,7 +72,38 @@
                     <view key="view" contentMode="scaleToFill" id="NbD-js-Avn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22x-9n-30M">
+                                <rect key="frame" x="68" y="101" width="100" height="100"/>
+                                <state key="normal" image="slow"/>
+                                <connections>
+                                    <action selector="playSlowAudio:" destination="dOm-mP-6XI" eventType="touchUpInside" id="zyO-Rd-bfX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRu-Yy-DkB">
+                                <rect key="frame" x="275" y="406" width="50" height="50"/>
+                                <state key="normal" image="stop"/>
+                                <connections>
+                                    <action selector="stopAudio:" destination="dOm-mP-6XI" eventType="touchUpInside" id="UPg-kD-sqQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tqd-5M-pGQ">
+                                <rect key="frame" x="432" y="101" width="100" height="100"/>
+                                <state key="normal" image="fast"/>
+                                <connections>
+                                    <action selector="playFastAudio:" destination="dOm-mP-6XI" eventType="touchUpInside" id="tSa-i1-6pp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wRu-Yy-DkB" firstAttribute="centerX" secondItem="NbD-js-Avn" secondAttribute="centerX" id="07F-8q-Yli"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tqd-5M-pGQ" secondAttribute="trailing" constant="48" id="69D-Xu-dbu"/>
+                            <constraint firstItem="22x-9n-30M" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="CFp-L4-Ag5"/>
+                            <constraint firstItem="Tqd-5M-pGQ" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="O10-gR-VFk"/>
+                            <constraint firstItem="zbQ-Cx-IBT" firstAttribute="top" secondItem="wRu-Yy-DkB" secondAttribute="bottom" constant="144" id="bYS-1U-EDk"/>
+                            <constraint firstItem="22x-9n-30M" firstAttribute="leading" secondItem="NbD-js-Avn" secondAttribute="leadingMargin" constant="48" id="xAJ-RO-60n"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jhK-df-jql" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -98,7 +130,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
+        <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
     </resources>
 </document>
