@@ -94,15 +94,33 @@
                                     <action selector="playFastAudio:" destination="dOm-mP-6XI" eventType="touchUpInside" id="tSa-i1-6pp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYl-Gg-cdI">
+                                <rect key="frame" x="68" y="214" width="100" height="100"/>
+                                <state key="normal" image="chipmunk"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="dOm-mP-6XI" eventType="touchUpInside" id="zbH-lU-Vp6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yly-PB-gIA">
+                                <rect key="frame" x="432" y="214" width="100" height="100"/>
+                                <state key="normal" image="vadar"/>
+                                <connections>
+                                    <action selector="playDarthvadarAudio:" destination="dOm-mP-6XI" eventType="touchUpInside" id="noM-dp-WJP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wRu-Yy-DkB" firstAttribute="centerX" secondItem="NbD-js-Avn" secondAttribute="centerX" id="07F-8q-Yli"/>
-                            <constraint firstItem="22x-9n-30M" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="CFp-L4-Ag5"/>
-                            <constraint firstItem="Tqd-5M-pGQ" firstAttribute="top" secondItem="22x-9n-30M" secondAttribute="top" id="W9w-Y2-fhJ"/>
+                            <constraint firstItem="Yly-PB-gIA" firstAttribute="top" secondItem="Tqd-5M-pGQ" secondAttribute="bottom" constant="13" id="2r7-t4-0y9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yly-PB-gIA" secondAttribute="trailing" constant="48" id="4C2-Bm-l9W"/>
+                            <constraint firstItem="EYl-Gg-cdI" firstAttribute="top" secondItem="22x-9n-30M" secondAttribute="bottom" constant="13" id="E6I-0e-fOU"/>
+                            <constraint firstItem="EYl-Gg-cdI" firstAttribute="leading" secondItem="NbD-js-Avn" secondAttribute="leadingMargin" constant="48" id="Te8-wj-QoA"/>
                             <constraint firstItem="zbQ-Cx-IBT" firstAttribute="top" secondItem="wRu-Yy-DkB" secondAttribute="bottom" constant="144" id="bYS-1U-EDk"/>
+                            <constraint firstItem="Tqd-5M-pGQ" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="jXP-7b-tzT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tqd-5M-pGQ" secondAttribute="trailing" constant="48" id="nfY-IL-xiN"/>
-                            <constraint firstItem="22x-9n-30M" firstAttribute="leading" secondItem="NbD-js-Avn" secondAttribute="leadingMargin" constant="48" id="xAJ-RO-60n"/>
+                            <constraint firstItem="22x-9n-30M" firstAttribute="leading" secondItem="NbD-js-Avn" secondAttribute="leadingMargin" constant="48" id="rAS-cf-yM1"/>
+                            <constraint firstItem="22x-9n-30M" firstAttribute="top" secondItem="kY4-yO-Whb" secondAttribute="bottom" constant="37" id="xcD-v8-HFl"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -130,9 +148,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
         <image name="fast" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow" width="100" height="100"/>
         <image name="stop" width="50" height="50"/>
+        <image name="vadar" width="100" height="100"/>
     </resources>
 </document>
